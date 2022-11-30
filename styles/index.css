@@ -45,7 +45,7 @@ li {
   
 }
 .choice {
-    border-bottom: 2px solid red transparent;
+    border-bottom: 2px solid red ;
 }
 .choice:hover {
     border: currentColor;
@@ -223,6 +223,7 @@ li {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    margin-block-end: 0;
     
     letter-spacing: 0.03em;
     
@@ -244,6 +245,7 @@ li {
     height: 70px;
     left: 0;
     bottom: 0;
+    
     background: rgba(47, 48, 58, 0.8);
 }
 
