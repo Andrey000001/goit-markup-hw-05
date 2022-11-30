@@ -64,6 +64,8 @@
       <section class="overlay">
         <h1 class="big-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
         <button class="button-one" type="button">Замовити послугу</button>
+        <div class="backdrop">
+        </div>
       </section>
 
       <!-- Детали -->
@@ -105,25 +107,21 @@
       <!-- Компьютер ,Телефон ,Планшет -->
       <section class="color-370">
         <div class="container">
-          <div class="product-list">
-            <h2 class="subtitle">Чим ми займаємося</h2>
+          <h2 class="subtitle">Чим ми займаємося</h2>
             <ul class="list-2">
               <li class="item_subtitle product-thumb">
                 <img width="370" src="images/images_1.jpeg" alt="Компьютер" />
                 <p class="text-thumb">ДЕСКТОПНІ ДОДАТКИ</p>
-
               </li>
               <li class="item_subtitle product-thumb">
                 <img width="370" src="images/images_2.jpeg" alt="Телефон" />
                 <p class="text-thumb">МОБІЛЬНІ ДОДАТКИ</p>
-
               </li>
               <li class="item_subtitle product-thumb">
                 <img width="370" src="images/images_3.jpeg" alt="Планшет" />
                 <p class="text-thumb">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
               </li>
             </ul>
-          </div>
         </div>
       </section>
 
@@ -456,6 +454,13 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <script>
+      console.log(document.querySelector('.page-header').getBoundingClientRect().height);  
+      const { height: pageHeaderHeight } = document
+        .querySelecto(".page-header")
+        getBoundingClientRect();
+
+      document.body.style.paddingTop = ${pageHeaderHeight}px;
+    </script>
   </body>
 </html>
