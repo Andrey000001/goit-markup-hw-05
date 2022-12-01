@@ -22,6 +22,7 @@ li {
 body {
   padding-top: 80px;
 }
+/* Container */
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -29,6 +30,10 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+
+
+/*ШАПКА */
 .page-header {
   top: 0;
   left: 0;
@@ -40,7 +45,7 @@ body {
   display: flex;
   align-items: center;
 }
-
+/* 3 СЫЛКИ НАВИГАЦИИ  */
 .choice {
   display: block;
   padding-top: 32px;
@@ -52,16 +57,36 @@ body {
   letter-spacing: 0.02em;
   color: #212121;
   text-decoration: none;
-  
 }
-.choice {
-    border-bottom: 2px solid red ;
-}
-.choice:hover {
-    border: currentColor;
+.choice:hover,
+.contact:hover,
+.choice:focus,
+.contact:focus {
+  color: var(--blue);
 }
 
+.list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
+.list .item + .item {
+  margin-left: 50px;
+}
+.current:hover::after {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 4px;
+  background-size: cover;
+  background-image: url(../images/icon/dash_blue.svg);
+  color: currentColor;
+
+}
+/* КОНТАКТЫ */
 .info {
   display: flex;
   margin-left: auto;
@@ -103,29 +128,8 @@ body {
 .link_nomer:hover {
   fill: var(--blue);
 }
-.choice:hover,
-.contact:hover,
-.choice:focus,
-.contact:focus {
-  color: var(--blue);
-}
 
-.list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-/* Соседи ,Last child . :not(:last child) */
-/* .list .item:last-child {
-    margin-right: 0;
-} */
-/* .list .item:not(:last-child) {
-    margin-right: 50px;
-} */
-.list .item + .item {
-  margin-left: 50px;
-}
+
 
 /* ИМЯ САЙТА  */
 .website_name {
@@ -150,17 +154,11 @@ body {
 .studioo {
   color: var(--white);
 }
+
+
+
+
 /* КНОПКА И ЗАГОЛОВОК */
-
-.backdrop {
-  position: fixed;
-  width: 528px;
-  height: 581px;
-  background: orange;
-  
-  
-}
-
 .overlay {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -183,7 +181,7 @@ body {
     url(../images/overley/hiro.jpg);
 }
 .big-title {
-  /* padding-top: 200px; */
+  
   width: 696px;
   height: 120px;
   margin-top: 0;
@@ -199,8 +197,9 @@ body {
 
   color: var(--white);
 }
-
+/* КНОПКА */
 .button-one {
+  position: relative;
   min-width: 216px;
 
   display: inline-block;
@@ -225,55 +224,7 @@ body {
   color: var(--white);
 }
 
-/* КАЧЕСТВА */
-.product-thumb {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-
-.product-thumb::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 70px;
-  left: 0;
-  bottom: 0;
-  background: rgba(47, 48, 58, 0.8);
-}
-.text-thumb {
-  
-  position: absolute;
-  display: flex;
-  bottom: 27px;
-  font-family: roboto;
-  color: var(--white);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* <!-- Детали --> */
 
 .color-quality {
   padding-top: 94px;
@@ -303,6 +254,9 @@ body {
   background-color: #f5f4fa;
   border-radius: 4px;
 }
+.item_quality + .item_quality {
+  margin-left: 30px;
+}
 .icon_antena::before {
   background-image: url(../images/icon/antenna.svg);
   background-size: 65.32px 70px;
@@ -320,9 +274,6 @@ body {
   background-image: url(../images/icon/astronaut.svg);
 }
 
-.item_quality + .item_quality {
-  margin-left: 30px;
-}
 .quality {
   font-family: var(--font-roboto);
   font-weight: 700;
@@ -345,7 +296,36 @@ body {
   color: var(--grey);
 }
 
-/*subtitle */
+/*Компьютер ,Телефон ,Планшет */
+.product-thumb {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
+.product-thumb::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+.text-thumb {
+  
+  position: absolute;
+  display: flex;
+  bottom: 27px;
+  font-family: roboto;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+}
 .color-370 {
   padding-bottom: 94px;
 }
@@ -369,15 +349,13 @@ body {
   margin-left: 30px;
 }
 
-/* НАША КОМАНДА */
+/* Наша команда ФОТКИ И ОПИСАНИЕ */
 .color-team {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: #f5f4fa;
 }
-/* .item_subtitle_270 + .item_subtitle_270{
-    margin-left: 30px;
-} */
+
 .p_h3 {
   padding-top: 30px;
   padding-bottom: 16px;

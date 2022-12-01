@@ -31,13 +31,13 @@
           >Web<span class="studio">Studio</span></a
         >
         <ul class="list">
-          <li class="item">
+          <li class="item current">
             <a class="choice" href="">Студия</a>
           </li>
-          <li class="item">
+          <li class="item current">
             <a class="choice" href="./portfolio.html">Портфоліо</a>
           </li>
-          <li class="item">
+          <li class="item current">
             <a class="choice" href="">Контакти</a>
           </li>
         </ul>
@@ -63,9 +63,7 @@
     <main>
       <section class="overlay">
         <h1 class="big-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-        <button class="button-one" type="button">Замовити послугу</button>
-        <div class="backdrop">
-        </div>
+        <button class="button-one" type="button" data-modal-open>Замовити послугу</button >
       </section>
 
       <!-- Детали -->
@@ -454,13 +452,25 @@
         </div>
       </div>
     </footer>
-    <script>
+    <!-- Модальное окно -->
+      <div class="backdrope is hidden">
+        <div class="modal">
+          <button class="close">
+            <svg>
+              <use href="./images/icon/symbol-defs_2.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    <script src="./js/modal.js">
+      
       console.log(document.querySelector('.page-header').getBoundingClientRect().height);  
       const { height: pageHeaderHeight } = document
         .querySelecto(".page-header")
         getBoundingClientRect();
 
-      document.body.style.paddingTop = ${pageHeaderHeight}px;
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
   </body>
 </html>
+
