@@ -72,7 +72,7 @@ body {
   color: #212121;
   text-decoration: none;
 
-  transition: color 250ms;
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -111,7 +111,7 @@ body {
   background-color: var(--blue);
 
   transform: scale(0);
-  transition: 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -170,9 +170,7 @@ body {
   text-decoration: none;
   color: var(--grey);
 
-  transition: color ;
-  transition-duration: 250ms;
-  transition-timing-function: linear;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -326,6 +324,7 @@ body {
   pointer-events: none;
 }
 
+
 .modal {
   position: absolute;
   top: 50%;
@@ -338,6 +337,8 @@ body {
 
   background-color: var(--white);
 }
+
+
 .close {
   position: absolute;
   right: 0;
@@ -355,15 +356,15 @@ body {
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #0000001A;
-  background-color: #fff;
+  background-color: var(--white);
 
 }
+
+
 .icon-close {
   width: 11px;
   height: 11px;
 }
-
-
 /* MODALKA МОДАЛКА END*/
 
 
@@ -459,6 +460,7 @@ body {
   color: var(--grey);
 }
 /* <!-- Детали --> END*/
+
 
 /*Компьютер ,Телефон ,Планшет */
 .product-thumb {
@@ -591,7 +593,7 @@ body {
   align-items: center;
   
   border-radius: 50%;
-  transition: 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons:hover,
@@ -675,8 +677,10 @@ body {
 
 /* ПОСТІЙНІ КЛІЕНТИ  */
 .group:hover .group_group {
-  transition: 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 /* FOOTER- НИЗ */
 .floor {
   padding-top: 60px;
@@ -716,9 +720,7 @@ body {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 
-  transition: color ;
-  transition-duration: 250ms;
-  transition-timing-function: linear;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
