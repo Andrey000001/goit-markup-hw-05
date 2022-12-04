@@ -43,8 +43,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  
   min-height: 80px;
   width: 100%;
+  
+  background-color: var(--white);
 }
 
 
@@ -68,11 +71,13 @@ body {
   font-size: 14px;
   line-height: 1.1428;
   letter-spacing: 0.02em;
-
-  color: #212121;
+  
   text-decoration: none;
+  color: #212121;
 
-  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -110,14 +115,10 @@ body {
   border-radius: 2px;
   background-color: var(--blue);
 
-  transform: scale(0);
-  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.card:hover::after {
-  transform: scale(1);
-}
+
 
 
 .choice:hover,
@@ -170,7 +171,9 @@ body {
   text-decoration: none;
   color: var(--grey);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -292,10 +295,11 @@ body {
   line-height: 1.875;
   letter-spacing: 0.06em;
   
-  cursor: pointer;
   border-radius: 4px;
+  border-color: transparent;
   color: var(--white);
   background: var(--blue);
+  cursor: pointer;
 }
 
 
@@ -316,6 +320,8 @@ body {
   height: 100%;
 
   background: rgba(0, 0, 0, 0.2);
+  transition-duration: 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -593,7 +599,9 @@ body {
   align-items: center;
   
   border-radius: 50%;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color; 
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons:hover,
@@ -665,6 +673,9 @@ body {
   border-radius: 4px;
   border: 1px solid #afb1b8;
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -676,9 +687,7 @@ body {
 /* Наша команда ФОТКИ И ОПИСАНИЕ END*/
 
 /* ПОСТІЙНІ КЛІЕНТИ  */
-.group:hover .group_group {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 
 /* FOOTER- НИЗ */
@@ -720,7 +729,9 @@ body {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -761,6 +772,7 @@ body {
   display: flex;
   align-items: baseline;
 }
+
 
 .iconsss {
   border-radius: 50%;
