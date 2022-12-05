@@ -12,7 +12,14 @@ li{
     padding: 0;
 }
 
-
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 body {
     padding-top: 80px;
 }
@@ -89,27 +96,10 @@ body {
     text-decoration: none;
     color: #212121;
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: (0.4, 0, 0.2, 1); 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
-/* .card:hover::after {
-    position: absolute;
-    left: 0;
-    bottom: 0; 
-    
-    content: '';
-    width: 100%;
-    height: 4px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(../images/icon/svg/dash_blue.svg);
-
-    border-radius: 2px;
-    background-color: currentColor;
-} */
 .item {
     position: relative;
 }
@@ -146,9 +136,7 @@ body {
     text-decoration: none;
     color: var(--grey);
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -245,7 +233,6 @@ body {
     color: var(--white);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     background-color: var(--blue);
-   
 }
 
 
@@ -265,7 +252,7 @@ body {
 
 .but {
     padding-top: 6px;
-    padding-bottom: 6px;
+    padding-bottom: 6px;    
     padding-left: 22px;
     padding-right: 22px;
 
@@ -280,16 +267,12 @@ body {
     background: #F5F4FA;
     cursor: pointer;
 
-    transition-property: color,background;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* КНОПКИ END*/
 
+
 /* 9 ФОТО ,НАЗВАНИЕ */
-
-
-
 .relativ_thumb {
     position: relative;
     overflow: hidden;
@@ -298,9 +281,8 @@ body {
 
 .item_photo:hover .overlay {
     transform: translateY(0);
-
-    /* transform: scale(1); */
 }
+
 
 .overlay {
     position: absolute;
@@ -314,14 +296,12 @@ body {
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: 0.03em;
-
+    
     background-color: rgba(33, 150, 243, 0.9);
     color: var(--white);
-
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
     transform: translateY(100%);
-    /* transform: scale(0); */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
 
@@ -343,15 +323,13 @@ body {
     width:calc((100% - 60px) / 3);
     
     background: var(--white);
-    border: 1px solid #EEEEEE;    
+    border: 1px solid #EEEEEE; 
+    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .item_photo:hover {
-    transition-duration: 250ms;
-    transition-property: box-shadow;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px 
     rgba(0, 0, 0, 0.16);
@@ -429,9 +407,7 @@ body {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
 
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color;
-    transition-duration: 250ms;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-1:hover ,
 .contact-1:focus {
@@ -488,9 +464,7 @@ body {
     border-radius: 50%;
     background-color: #FFFFFF1A;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: fill, background-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
